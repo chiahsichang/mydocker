@@ -1,0 +1,6 @@
+centos:
+   restart: always
+   privileged: true
+   hostname: centos
+   images:shona/centos
+   command: bash

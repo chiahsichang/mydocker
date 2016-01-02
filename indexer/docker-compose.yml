@@ -1,0 +1,14 @@
+indexer:
+  image: logstash:2.0.0
+  hostname: indexer
+  privileged: true
+  volumes:
+  - ./config:/etc/logstash/conf.g
+  - ./log:/var/log/logstash
+  external_links:
+  - redis_redis_1:redis
+  - elasticsearch_es0_1:elasticsearch
+  command: logstash agent -f /etc/logstash/conf.g/logstash-indexer.conf -l /var/log/logstash/indexer.log
+
+
+

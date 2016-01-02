@@ -1,0 +1,27 @@
+topbeat:
+  image: shona/topbeat
+  privileged: true
+  hostname: topbeat-server1
+  external_links:
+  - elasticsearch_es0_1:elasticsearch
+  environment:
+#    INDEX: server1
+    PROCS: .*
+    PERIOD: 10
+    
+#
+# for logstash
+#   PROFILE: logstash
+# for file
+#   PROFILE: file
+# volumes:
+# - {PATH}:/topbeat/data/
+# for Console
+#   PROFILE: console
+# for Custom
+#   PROFILE: custom
+# volumes:
+#   -{PATH}/config/topbeat.yml:/topbeat/config/topbeat.yml
+
+
+

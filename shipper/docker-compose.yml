@@ -1,0 +1,15 @@
+shipper:
+  image: logstash:2.0.0
+  hostname: shipper
+  privileged: true
+  volumes:
+  - ./config:/etc/logstash/conf.g
+  - ./log:/var/log/logstash
+  ports:
+  - 5043:5043
+  external_links:
+  - redis_redis_1:redis
+  command: logstash agent -f /etc/logstash/conf.g/shipper.conf -l /var/log/logstash/shipper.log
+
+
+

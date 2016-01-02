@@ -1,0 +1,9 @@
+es0:
+    image: shona/es
+    hostname: es0
+    privileged: true
+    ports:
+    - 9200:9200
+    - 9300:9300
+    environment:
+    - CLUSTER_NAME=ELK
