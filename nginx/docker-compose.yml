@@ -1,0 +1,7 @@
+nginx:
+  image: cht/centos-nginx
+  privileged: true
+  ports:
+    - "80:80"
+  volumes:
+    - ./default.conf:/etc/nginx/conf.d/default.conf
