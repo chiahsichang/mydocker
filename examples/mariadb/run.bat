@@ -1,0 +1,1 @@
+docker run --name mariadb -p 13306:3306  -e MYSQL_ROOT_PASSWORD=1qaz@WSX -d mariadb

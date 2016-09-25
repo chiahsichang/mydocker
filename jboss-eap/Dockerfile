@@ -9,6 +9,7 @@ ENV GID 1002
 
 # copy jboss eap file
 ADD ./installs/jboss-eap-${EAP}.0.zip /tmp/
+ADD ./installs/jboss-eap-${EAP}.6-patch.zip /tmp/
 RUN unzip /tmp/jboss-eap-${EAP}.0.zip -d /apps/ \
     && rm -rf /tmp/jboss-eap-${EAP}.0.zip \
     && useradd -u ${UID} jboss \

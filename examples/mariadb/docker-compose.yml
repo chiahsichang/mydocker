@@ -1,0 +1,10 @@
+mariadb:
+    image: mariadb:latest
+    restart: always
+    privileged: true  
+    environment:
+        - MYSQL_ROOT_PASSWORD=1qaz@WSX
+    hostname: mariadb
+    ports:
+        - 13306:3306
+  
