@@ -1,0 +1,27 @@
+registry:
+  image: registry:2
+  privileged: true
+  hostname: registry
+  restart: always
+  ports:
+    - 5000:5000
+  environment:
+    REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    REGISTRY_AUTH: htpasswd
+    REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+  volumes:
+    - ./data:/data
+    - ./auth:/auth
+registry-ui:
+  image: konradkleine/docker-registry-frontend:v2
+  privileged: true
+  hostname: registry-ui
+  restart: always
+  ports:
+    - 8080:80
+  links:
+    - registry
+  environment:
+    ENV_DOCKER_REGISTRY_HOST: registry
+    ENV_DOCKER_REGISTRY_PORT: 5000
