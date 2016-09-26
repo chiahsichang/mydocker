@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policyConfig>
+    <version>20160830111717</version>
+    <type>COMMON</type>
+    <reloadService>true</reloadService>
+    <ignoreSSLVerify>true</ignoreSSLVerify>
+    <socketTimeout>10000</socketTimeout>
+    <connectTimeout>1000</connectTimeout>
+    <proxyHost>proxy.cht.com.tw</proxyHost>
+    <proxyPort>8080</proxyPort>
+    <legalDomains>
+        <domain>localhost</domain>
+        <domain>127.0.0.1</domain>
+    </legalDomains>
+    <environment>開發環境</environment>
+
+</policyConfig>

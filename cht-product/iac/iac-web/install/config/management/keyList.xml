@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policyConfig>
+    <version>20160914170523</version>
+    <type>KEY_LIST</type>
+    <key>
+        <environment>甲方農糧正式區</environment>
+        <publicKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxFV1d5M+/6jeex57GfUbUoeHH32EZcUr2zBzJKVCSH5fKQExG6576iILL5lrtepUqV3kHMfiPowD6pk0ZswPvX2X11xxPIWvrQR8PwFBgjMDxCueYJZx8zqv7qRQVd/OwvqStW96c4Cg699kinAVoOwudIzIfKe1x5wH19N/FQIDAQAB</publicKey>
+    </key>
+    <key>
+        <environment>甲方農糧測試區</environment>
+        <publicKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxFV1d5M+/6jeex57GfUbUoeHH32EZcUr2zBzJKVCSH5fKQExG6576iILL5lrtepUqV3kHMfiPowD6pk0ZswPvX2X11xxPIWvrQR8PwFBgjMDxCueYJZx8zqv7qRQVd/OwvqStW96c4Cg699kinAVoOwudIzIfKe1x5wH19N/FQIDAQAB</publicKey>
+    </key>
+</policyConfig>

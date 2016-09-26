@@ -9,13 +9,13 @@ ENV LC_ALL en_US.UTF-8
 
 ENV FIRST_VER 1
 ENV MAIN_VER 8
-ENV CPU_VER 66
+ENV CPU_VER 101
 
 #install required packages
 RUN yum update -y && yum install -y wget tar unzip && yum -y clean all
 
 #download oracle jdk
-RUN wget -P /opt/ --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${MAIN_VER}u${CPU_VER}-b17/jdk-${MAIN_VER}u${CPU_VER}-linux-x64.tar.gz \
+RUN wget -P /opt/ --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${MAIN_VER}u${CPU_VER}-b13/jdk-${MAIN_VER}u${CPU_VER}-linux-x64.tar.gz \
     && tar xzf /opt/jdk-${MAIN_VER}u${CPU_VER}-linux-x64.tar.gz -C /opt \
     && rm /opt/jdk-${MAIN_VER}u${CPU_VER}-linux-x64.tar.gz
 
@@ -30,4 +30,9 @@ RUN mv /etc/localtime /etc/localtime.old && ln -s /usr/share/zoneinfo/Asia/Taipe
 
 
 # alternatives java jar and javac
-RUN alternatives --install /usr/bin/java java /opt/jdk${FIRST_VER}.${MAIN_VER}.0_${CPU_VER}/bin/java 2 \
+RUN alternatives --install /usr/bin/java java /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/java 2 && \
+    alternatives --install /usr/bin/jar jar /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/jar 2 && \
+    alternatives --install /usr/bin/javac javac /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/javac 2 && \
+    alternatives --set jar /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/jar && \
+    alternatives --set javac /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/javac
+    

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policyConfig>
+    <server>
+        <environment>甲方農糧測試區</environment>
+        <id>AFA_TEST_ESIGATE</id>
+        <ip>210.69.71.108</ip>
+        <port>80</port>
+        <protocol>http</protocol>
+        <type>ESIGATE</type>
+    </server>
+    <server>
+        <environment>甲方農糧測試區</environment>
+        <id>AFA_TEST_CAS</id>
+        <ip>210.69.71.108</ip>
+        <port>80</port>
+        <protocol>http</protocol>
+        <type>CAS</type>
+    </server>
+    <server>
+        <environment>甲方農糧正式區</environment>
+        <id>AFA_ESIGATE</id>
+        <ip>210.69.71.244</ip>
+        <port>443</port>
+        <protocol>https</protocol>
+        <type>ESIGATE</type>
+    </server>
+    <server>
+        <environment>甲方農糧正式區</environment>
+        <id>AFA_CAS</id>
+        <ip>210.69.71.244</ip>
+        <port>443</port>
+        <protocol>https</protocol>
+        <type>CAS</type>
+    </server>
+ 
+</policyConfig>
