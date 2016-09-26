@@ -30,9 +30,9 @@ RUN mv /etc/localtime /etc/localtime.old && ln -s /usr/share/zoneinfo/Asia/Taipe
 
 
 # alternatives java jar and javac
-RUN alternatives --install /usr/bin/java java /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/java 2 && \
-    alternatives --install /usr/bin/jar jar /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/jar 2 && \
-    alternatives --install /usr/bin/javac javac /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/javac 2 && \
-    alternatives --set jar /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/jar && \
-    alternatives --set javac /opt/jdk1.${JDK_MAIN_VER}.0_${JDK_CPU_VER}/bin/javac
+RUN alternatives --install /usr/bin/java java /opt/jdk${FIRST_VER}.${MAIN_VER}.0_${CPU_VER}/bin/java 2 && \
+    alternatives --install /usr/bin/jar jar /opt/jdk${FIRST_VER}.${MAIN_VER}.0_${CPU_VER}/bin/jar 2 && \
+    alternatives --install /usr/bin/javac javac /opt/jdk${FIRST_VER}.${MAIN_VER}.0_${CPU_VER}/bin/javac 2 && \
+    alternatives --set jar /opt/jdk${FIRST_VER}.${MAIN_VER}.0_${CPU_VER}/bin/jar && \
+    alternatives --set javac /opt/jdk${FIRST_VER}.${MAIN_VER}.0_${CPU_VER}/bin/javac
     

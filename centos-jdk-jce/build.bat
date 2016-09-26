@@ -1,1 +1,13 @@
-docker build --rm --build-arg HTTP_PROXY=http://proxy.cht.com.tw:8080 --build-arg http_proxy=http://proxy.cht.com.tw:8080 --build-arg HTTPS_PROXY=http://proxy.cht.com.tw:8080 --build-arg https_proxy=http://proxy.cht.com.tw:8080 -t cht/centos-jdk-jce:7-8u101-8 .
+@echo off
+
+setlocal
+
+set BUILD_ARG=
+
+set PROXY=%1
+
+if not "%PROXY%" == "" (
+	set BUILD_ARG=--build-arg HTTP_PROXY=%PROXY% --build-arg http_proxy=%PROXY% --build-arg HTTPS_PROXY=%PROXY% --build-arg https_proxy=%PROXY%
+)
+
+docker build %BUILD_ARG% --rm -t cht/centos-jdk-jce:7-8u101-8 .
