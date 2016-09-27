@@ -1,6 +1,6 @@
 centos:
-   restart: always
+   #restart: always
    privileged: true
    hostname: centos
-   images:shona/centos
+   image: cht/centos-jdk-jce
    command: bash
