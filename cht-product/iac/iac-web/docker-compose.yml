@@ -1,0 +1,5 @@
+iac-web:
+    image: cht/iac-web
+    #restart: always
+    ports:
+        - 18080:8080

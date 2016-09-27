@@ -1,4 +1,4 @@
-FROM docker.io/centos:7
+FROM cht/centos
 
 MAINTAINER Docker <docker@cht.com.tw>
 

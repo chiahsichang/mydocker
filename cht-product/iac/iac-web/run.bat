@@ -1,0 +1,1 @@
+docker run --rm --name iac-web -p 18080:8080 cht/iac-web

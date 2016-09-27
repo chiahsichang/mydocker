@@ -1,4 +1,4 @@
-FROM dordoka/tomcat
+FROM cht/tomcat-centos-jdk-jce
 
 ENV SSO_CONFIGPATH /appdata/iac/config
 ENV SSO_LOGPATH /appdata/iac/log
@@ -13,4 +13,4 @@ ENV JAVA_OPTS "$JAVA_OPTS -Dcht.security.sso.configPath=$SSO_CONFIGPATH"
 ENV JAVA_OPTS "$JAVA_OPTS -Dcht.security.sso.logPath=$SSO_LOGPATH"
 
 # ADD files
-ADD ./install/iac.war /opt/tomcat/webapps
+ADD ./install/iac.war /usr/local/tomcat/webapps

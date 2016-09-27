@@ -1,1 +1,1 @@
-docker run -it cht/centos-jdk-jce bash
+docker run --rm -it cht/centos-jdk-jce bash

@@ -1,0 +1,1 @@
+docker run --rm -it cht/tomcat-centos-jdk-jce bash

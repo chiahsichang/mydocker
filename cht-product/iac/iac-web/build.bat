@@ -1,1 +1,0 @@
-docker build --rm -t iac/iac-web:1.0 .
