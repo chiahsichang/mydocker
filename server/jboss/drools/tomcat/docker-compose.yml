@@ -1,0 +1,5 @@
+tomcat-kie-drools-wb:
+    image: cht/tomcat-kie-drools-wb
+    #restart: always
+    ports:
+        - 18080:8080

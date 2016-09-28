@@ -1,0 +1,1 @@
+docker build --rm -t cht/tomcat-kie-drools-wb:latest -t cht/tomcat-kie-drools-wb:1.0 .
