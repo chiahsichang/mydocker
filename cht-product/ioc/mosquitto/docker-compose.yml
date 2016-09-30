@@ -1,0 +1,6 @@
+mosquitto:
+    image: cht/mosquitto
+    #restart: always
+    ports:
+        - 11883:1883
+        - 19001:9001

@@ -1,0 +1,1 @@
+docker run --rm --name mosquitto -p 11883:1883 -p 19001:9001 cht/mosquitto
