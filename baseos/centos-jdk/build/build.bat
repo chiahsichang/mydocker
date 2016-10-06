@@ -1,1 +1,1 @@
-docker build --rm --build-arg HTTP_PROXY=http://proxy.cht.com.tw:8080 --build-arg http_proxy=http://proxy.cht.com.tw:8080 --build-arg HTTPS_PROXY=http://proxy.cht.com.tw:8080 --build-arg https_proxy=http://proxy.cht.com.tw:8080 -t 192.168.30.121:5000/cht/nginx-sticky:1.9.14 .
+docker build --rm=true --force-rm=true --build-arg HTTP_PROXY=http://proxy.cht.com.tw:8080 --build-arg http_proxy=http://proxy.cht.com.tw:8080 --build-arg HTTPS_PROXY=http://proxy.cht.com.tw:8080 --build-arg https_proxy=http://proxy.cht.com.tw:8080 -t 192.168.30.121:5000/cht/nginx-sticky:1.9.14 .

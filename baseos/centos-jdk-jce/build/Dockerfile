@@ -12,7 +12,7 @@ ENV MAIN_VER 8
 ENV CPU_VER 101
 
 #install required packages
-RUN yum update -y && yum install -y wget tar unzip && yum -y clean all
+RUN yum update -y && yum -y clean all
 
 #download oracle jdk
 RUN wget -P /opt/ --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${MAIN_VER}u${CPU_VER}-b13/jdk-${MAIN_VER}u${CPU_VER}-linux-x64.tar.gz \
