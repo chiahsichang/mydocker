@@ -1,0 +1,1 @@
+docker run --rm --name apollomq -p=61613:61613 -p=61623:61623 -p=61680:61680 cht/apollomq
