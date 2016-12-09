@@ -1,0 +1,14 @@
+version: '2'
+
+services: 
+    iac-web:
+        image: cht/centos
+        #restart: always
+        stdin_open: true
+        tty: true
+        external_links:
+            - somehost:iac-web1
+        environment: 
+            - TEST1=${TEST}
+        command: bash
+    
