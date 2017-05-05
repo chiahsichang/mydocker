@@ -1,0 +1,18 @@
+#!/bin/bash
+
+docker service create \
+  --constraint 'node.hostname == IAPCHVLET024' \
+  --replicas 1 \
+  --network afanet \
+  --name slave \
+  --mount type=volume,source=iapdata_config,destination=/appdata/iapdata/config,volume-opt="type=nfs",volume-opt="o=addr=10.82.110.23,ro",volume-opt="device=:/appdata/iapdata/config" \
+  --mount type=bind,source=/appdata/iapdata/jboss-eap/domain,destination=/apps/jboss-eap-6.4/domain \
+  --mount type=bind,source=/appdata/iapdata/jboss-eap/welcome-content,destination=/apps/jboss-eap-6.4/welcome-content \
+  --mount type=bind,source=/appdata/iapdata/jboss-eap/modules,destination=/apps/jboss-eap-6.4/modules \
+  --mount type=bind,source=/appdata/iapdata/jboss-eap/cache,destination=/apps/jboss-eap-6.4/cache \
+  --publish 8080:8080 \
+  -e DOMAIN_MODE=slave \
+  -e DOMAIN_MASTER_HOST=master \
+  10.82.20.11:5000/sso/jboss-eap-gossip-sso:6.4.0-1.0
+
+

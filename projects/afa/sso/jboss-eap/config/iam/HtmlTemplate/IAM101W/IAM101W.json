@@ -1,0 +1,183 @@
+[ {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : true,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "userId",
+	"title" : "使用者帳號：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "A12345",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "userName",
+	"title" : "使用者姓名：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "我是A12345的姓名",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "userUid",
+	"title" : "身份證字號：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "我是A12345的身份證字號",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "啟用",
+		"inputClass" : "",
+		"radioName" : "A",
+		"radioValue" : "1",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "radio",
+		"inputMaxlength" : 0
+	}, {
+		"lableDisplay" : "停用",
+		"inputClass" : "",
+		"radioName" : "A",
+		"radioValue" : "0",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "radio",
+		"inputMaxlength" : 0
+	}, {
+		"lableDisplay" : "鎖定中",
+		"inputClass" : "",
+		"radioName" : "A",
+		"radioValue" : "2",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "radio",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "state",
+	"title" : "帳號狀態：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "1",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : true,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "orgId",
+	"title" : "服務單位代碼：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "我是A12345的服務單位代碼",
+	"hidden" : true,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : true,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "orgName",
+	"title" : "服務單位：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "我是A12345的服務單位",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "email",
+	"title" : "電子郵件：",
+	"title_preStr" : "",
+	"title_preStr_color" : "#000000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "我是A12345的電子郵件",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_phone",
+	"title" : "電話：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "我是A12345的電話",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_remark",
+	"title" : "備註：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "我是A12345的備註",
+	"hidden" : false,
+	"readonly" : false
+} ]
