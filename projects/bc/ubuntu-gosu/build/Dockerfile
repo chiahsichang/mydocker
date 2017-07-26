@@ -11,6 +11,8 @@ RUN set -ex; \
 	fetchDeps=' \
 		ca-certificates \
 		wget \
+		ntp \
+		ntpdate \
 	'; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends $fetchDeps; \
