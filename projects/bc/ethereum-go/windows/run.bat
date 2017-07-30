@@ -1,0 +1,1 @@
+docker run -it --rm -p 8000:8000 -p 30303:30303 -v d:/data/ethereum:/root/.ethereum ethereum/client-go --identity "chtnode1" --ipcdisable --rpc --rpcport "8000" -rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "db,eth,net,web3" --port "30303" --nodiscover  --networkid 12345
