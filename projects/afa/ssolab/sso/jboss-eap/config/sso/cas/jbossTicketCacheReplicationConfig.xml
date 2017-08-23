@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed to Jasig under one or more contributor license agreements. 
+	See the NOTICE file distributed with this work for additional information 
+	regarding copyright ownership. Jasig licenses this file to you under the 
+	Apache License, Version 2.0 (the "License"); you may not use this file except 
+	in compliance with the License. You may obtain a copy of the License at the 
+	following location: http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
+<!-- ===================================================================== -->
+<!-- -->
+<!-- Sample TreeCache Service Configuration -->
+<!-- -->
+<!-- ===================================================================== -->
+
+
+<server>
+
+	<!-- ==================================================================== -->
+	<!-- Defines TreeCache configuration -->
+	<!-- ==================================================================== -->
+
+	<mbean code="org.jboss.cache.TreeCache" name="jboss.cache:service=TreeCache">
+
+		<depends>jboss:service=Naming</depends>
+		<!-- <depends>jboss:service=TransactionManager</depends> -->
+
+		<!-- Configure the TransactionManager -->
+		<!-- <attribute name="TransactionManagerLookupClass">org.jboss.cache.transaction.DummyTransactionManagerLookup</attribute> -->
+
+		<!-- Isolation level : SERIALIZABLE REPEATABLE_READ (default) READ_COMMITTED 
+			READ_UNCOMMITTED NONE -->
+		<attribute name="IsolationLevel">REPEATABLE_READ</attribute>
+
+		<!-- Valid modes are LOCAL REPL_ASYNC REPL_SYNC INVALIDATION_ASYNC INVALIDATION_SYNC -->
+		<attribute name="CacheMode">REPL_SYNC</attribute>
+
+		<!-- Just used for async repl: use a replication queue -->
+		<attribute name="UseReplQueue">false</attribute>
+
+		<!-- Replication interval for replication queue (in ms) -->
+		<attribute name="ReplQueueInterval">0</attribute>
+
+		<!-- Max number of elements which trigger replication -->
+		<attribute name="ReplQueueMaxElements">0</attribute>
+
+		<!-- Name of cluster. Needs to be the same for all clusters, in order to 
+			find each other -->
+		<attribute name="ClusterName">TreeCache-Cluster</attribute>
+
+		<!-- JGroups protocol stack properties. Can also be a URL, e.g. file:/home/bela/default.xml 
+			<attribute name="ClusterProperties"></attribute> -->
+
+		<attribute name="ClusterConfig">
+			<config>
+				<!-- TCP replica, jboss host需設定thishost、otherhost-->
+				<TCP bind_addr="thishost" start_port="7800" loopback="true"
+					tcp_nodelay="true" recv_buf_size="20000000" send_buf_size="640000"
+					discard_incompatible_packets="true" enable_bundling="false"
+					max_bundle_size="64000" max_bundle_timeout="30"
+					use_incoming_packet_handler="true" use_outgoing_packet_handler="false"
+					down_thread="false" up_thread="false" use_send_queues="false"
+					sock_conn_timeout="300" skip_suspected_members="true" />
+				<TCPPING initial_hosts="thishost[7800],otherhost[7800]"
+					port_range="3" timeout="3000" down_thread="false" up_thread="false"
+					num_initial_members="3" />
+				<MERGE2 max_interval="100000" down_thread="false" up_thread="false"
+					min_interval="20000" />
+				<FD_SOCK down_thread="false" up_thread="false" />
+				<FD timeout="10000" max_tries="5" down_thread="false" up_thread="false"
+					shun="true" />
+				<VERIFY_SUSPECT timeout="1500" down_thread="false"
+					up_thread="false" />
+				<pbcast.NAKACK max_xmit_size="60000" use_mcast_xmit="false"
+					gc_lag="0" retransmit_timeout="300,600,1200,2400,4800" down_thread="false"
+					up_thread="false" discard_delivered_msgs="true" />
+				<pbcast.STABLE stability_delay="1000"
+					desired_avg_gossip="50000" down_thread="false" up_thread="false"
+					max_bytes="400000" />
+				<pbcast.GMS print_local_addr="true" join_timeout="3000"
+					down_thread="false" up_thread="false" join_retry_timeout="2000"
+					shun="true" view_bundling="true" />
+				<pbcast.STATE_TRANSFER down_thread="false"
+					up_thread="false" use_flush="false" />
+			</config>
+		</attribute>
+
+		<!-- <attribute name="ClusterConfig"> -->
+		<!-- <config> -->
+		<!-- <UDP mcast_addr="228.1.2.2" mcast_port="48866" -->
+		<!-- ip_ttl="1" ip_mcast="true" -->
+		<!-- mcast_send_buf_size="150000" mcast_recv_buf_size="80000" -->
+		<!-- ucast_send_buf_size="150000" ucast_recv_buf_size="80000" -->
+		<!-- loopback="false"/> -->
+		<!-- <PING timeout="2000" num_initial_members="3" -->
+		<!-- up_thread="false" down_thread="false"/> -->
+		<!-- <MERGE2 min_interval="10000" max_interval="20000"/> -->
+		<!-- <FD shun="true" up_thread="true" down_thread="true" /> -->
+		<!-- <FD_SOCK/> -->
+		<!-- <VERIFY_SUSPECT timeout="1500" -->
+		<!-- up_thread="false" down_thread="false"/> -->
+		<!-- <pbcast.NAKACK gc_lag="50" retransmit_timeout="600,1200,2400,4800" -->
+		<!-- max_xmit_size="8192" up_thread="false" down_thread="false"/> -->
+		<!-- <UNICAST timeout="600,1200,2400" window_size="100" min_threshold="10" -->
+		<!-- down_thread="false"/> -->
+		<!-- <pbcast.STABLE desired_avg_gossip="20000" -->
+		<!-- up_thread="false" down_thread="false"/> -->
+		<!-- <FRAG frag_size="8192" -->
+		<!-- down_thread="false" up_thread="false"/> -->
+		<!-- <pbcast.GMS join_timeout="5000" join_retry_timeout="2000" -->
+		<!-- shun="true" print_local_addr="true"/> -->
+		<!-- <pbcast.STATE_TRANSFER up_thread="true" down_thread="true"/> -->
+		<!-- </config> -->
+		<!-- </attribute> -->
+
+
+		<!-- Whether or not to fetch state on joining a cluster NOTE this used 
+			to be called FetchStateOnStartup and has been renamed to be more descriptive. -->
+		<attribute name="FetchInMemoryState">true</attribute>
+
+		<!-- The max amount of time (in milliseconds) we wait until the initial 
+			state (ie. the contents of the cache) are retrieved from existing members 
+			in a clustered environment -->
+		<attribute name="InitialStateRetrievalTimeout">15000</attribute>
+
+		<!-- Number of milliseconds to wait until all responses for a synchronous 
+			call have been received. -->
+		<attribute name="SyncReplTimeout">15000</attribute>
+
+		<!-- Max number of milliseconds to wait for a lock acquisition -->
+		<attribute name="LockAcquisitionTimeout">10000</attribute>
+
+		<!-- Name of the eviction policy class. -->
+		<attribute name="EvictionPolicyClass"></attribute>
+
+		<!-- Indicate whether to use marshalling or not. Set this to true if you 
+			are running under a scoped class loader, e.g., inside an application server. 
+			Default is "false". -->
+		<attribute name="UseMarshalling">false</attribute>
+
+		<attribute name="StateTransferVersion">130</attribute>
+
+		<!--attribute name="CacheLoaderConfiguration"> <config> <passivation>false</passivation> 
+			<preload>/</preload> <shared>false</shared> <cacheloader> <class>org.jboss.cache.loader.ClusteredCacheLoader</class> 
+			<properties> timeout=1000 </properties> <async>false</async> <fetchPersistentState>false</fetchPersistentState> 
+			<ignoreModifications>false</ignoreModifications> </cacheloader> </config> 
+			</attribute -->
+	</mbean>
+</server>

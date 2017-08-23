@@ -1,0 +1,116 @@
+version: '3.2'
+services:
+  ews:
+    image: 10.82.20.11:5000/cht/jboss-ews:3.0.2
+    hostname: ews
+    ports:
+      - "80:80"
+      - "6660:6660"
+    networks:
+      - afanet
+    environment:
+      - DOMAIN_MODE=slave
+      - DOMAIN_MASTER_HOST=master
+    volumes:
+      - type: bind
+        source: /appdata/iapdata/jws-3.0/conf
+        target: /apps/jws-3.0/httpd/conf
+      - type: bind
+        source: /appdata/iapdata/jws-3.0/conf.d
+        target: /apps/jws-3.0/httpd/conf.d
+      - type: bind
+        source: /appdata/iapdata/jws-3.0/conf.modules.d
+        target: /apps/jws-3.0/httpd/conf.modules.d
+      - type: bind
+        source: /appdata/iapdata/jws-3.0/extra
+        target: /apps/jws-3.0/httpd/extra
+      - type: bind
+        source: /appdata/iapdata/jws-3.0/www
+        target: /apps/jws-3.0/httpd/www
+      - type: bind
+        source: /appdata/iapdata/certs/GCA3.crt
+        target: /etc/pki/tls/certs/GCA3.crt
+      - type: bind
+        source: /appdata/iapdata/certs/iaptest.afa.gov.tw.crt
+        target: /etc/pki/tls/certs/iaptest.afa.gov.tw.crt
+      - type: bind
+        source: /appdata/iapdata/certs/privateKey/iaptest.afa.gov.tw.key
+        target: /etc/pki/tls/private/iaptest.afa.gov.tw.key
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == IAPCHVLET023
+  gossip:
+    image: 10.82.20.11:5000/sso/jboss-eap-gossip-sso:6.4.0-1.0
+    hostname: gossip
+    ports:
+      - "12001:12001"
+    networks:
+      - afanet	  
+    environment:
+      - DOMAIN_MODE=gossip
+    deploy:
+      mode: replicated
+      replicas: 1
+
+  master:
+    image: 10.82.20.11:5000/sso/jboss-eap-gossip-sso:6.4.0-1.0
+    hostname: master
+    depends_on:
+      - gossip
+    ports:
+      - "9990:9990"
+      - "9999:9999"
+    networks:
+      - afanet	  
+    environment:
+      - DOMAIN_MODE=master
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+
+  slave:
+    image: 10.82.20.11:5000/sso/jboss-eap-gossip-sso:6.4.0-1.0
+    depends_on:
+      - master
+    ports:
+      - "8080:8080"
+    networks:
+      - afanet
+    environment:
+      - DOMAIN_MODE=slave
+      - DOMAIN_MASTER_HOST=master
+      - CAS_HOST=10.82.110.24
+      - CASCLIENT_HOST=10.82.110.24
+    volumes:
+      - iapdata_config:/appdata/iapdata/config
+      - iapdata_logs:/appdata/iapdata/logs/sso
+    deploy:
+      mode: replicated
+      replicas: 2
+volumes:
+  iapdata_config:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=10.82.110.23,ro
+      device: :/appdata/iapdata/config
+#    external: true
+  iapdata_logs:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=10.82.110.23,rw
+      device: :/appdata/iapdata/logs/sso
+#    external: true
+
+networks:
+  afanet: 
+#    external:
+#      name: afanet
+    

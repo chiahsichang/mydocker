@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policyConfig>
+    <version>20160921105422</version>
+    <uriEncoding>UTF-8</uriEncoding>
+    <useCache>false</useCache>
+    <maxConnectionsPerHost>1500</maxConnectionsPerHost>
+    <socketTimeout>600000</socketTimeout>
+    <ignoreSSLVerify>true</ignoreSSLVerify>
+    <policy>
+        <id>afabi_100</id>
+        <remoteUrlBase>http://www.iisi.idv.tw/afabi_100</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>afabi_100</urlPattern>
+            <urlPattern>AFABI_100</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_clientip"/>
+                            <param key="sso_auth_code"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/index.aspx</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>afa</id>
+        <remoteUrlBase>http://ap.afa.gov.tw:8080/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptest.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_clientip"/>
+                            <param key="sso_auth_code"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/login</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>ypm</id>
+        <remoteUrlBase>http://ypm.afa.gov.tw/ypm</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>ypm</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_clientip"/>
+                            <param key="sso_auth_code"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/login</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>pqr</id>
+        <remoteUrlBase>http://qrctest.afa.gov.tw/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestpqr.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_clientip"/>
+                            <param key="sso_auth_code"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/SSOLogin</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>headers</id>
+        <remoteUrlBase>http://esigate.afa.gov.tw:8080/header</remoteUrlBase>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_auth_code"/>
+                            <param key="sso_clientip"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/headers</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>rinos</id>
+        <remoteUrlBase>http://rinosap.afa.gov.tw/global</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>global</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_auth_code"/>
+                            <param key="sso_clientip"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/ssoLoginAFA.jsp</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>virtuoso</id>
+        <remoteUrlBase>http://vosap.afa.gov.tw/vos-adminconsole</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>vos-adminconsole</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_auth_code"/>
+                            <param key="sso_clientip"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/ssoAFA</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>pfb</id>
+        <remoteUrlBase>http://10.1.1.174/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestpfb.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="insert_form" value="true"/>
+                            <param key="username_field_name" value="j_username"/>
+                            <param key="password_field_name" value="j_password"/>
+                            <param key="form_name" value="LoginForm"/>
+                            <param key="login_target" value="PFB"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/Login.jsp</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.ContentRewriter</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="http://10.1.1.174/" value="http://iaptestpfb.afa.gov.tw/"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/*</mappingPath>
+                        </mappingPaths>
+                        <bypassPaths>
+                            <bypassPath>**/images/**</bypassPath>
+                            <bypassPath>**/common/**</bypassPath>
+                            <bypassPath>**/loginProcessAction.do</bypassPath>
+                            <bypassPath>**/logout.do</bypassPath>
+                        </bypassPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>pfb_1</id>
+        <remoteUrlBase>http://10.1.1.174/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestpfb_1.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="insert_form" value="true"/>
+                            <param key="username_field_name" value="j_username"/>
+                            <param key="password_field_name" value="j_password"/>
+                            <param key="other_param_name" value="j_level" attribute="1"/>
+                            <param key="form_name" value="LoginForm"/>
+                            <param key="login_target" value="PFB"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/Login.jsp</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.ContentRewriter</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="http://10.1.1.174/" value="http://iaptestpfb_1.afa.gov.tw/"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/*</mappingPath>
+                        </mappingPaths>
+                        <bypassPaths>
+                            <bypassPath>**/images/**</bypassPath>
+                            <bypassPath>**/common/**</bypassPath>
+                            <bypassPath>**/loginProcessAction.do</bypassPath>
+                            <bypassPath>**/logout.do</bypassPath>
+                        </bypassPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>pfb_2</id>
+        <remoteUrlBase>http://10.1.1.174/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iappfb_2.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="insert_form" value="true"/>
+                            <param key="username_field_name" value="j_username"/>
+                            <param key="password_field_name" value="j_password"/>
+                            <param key="other_param_name" value="j_level" attribute="2"/>
+                            <param key="form_name" value="LoginForm"/>
+                            <param key="login_target" value="PFB"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/Login.jsp</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.ContentRewriter</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="http://10.1.1.174/" value="http://iaptestpfb_2.afa.gov.tw/"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/*</mappingPath>
+                        </mappingPaths>
+                        <bypassPaths>
+                            <bypassPath>**/images/**</bypassPath>
+                            <bypassPath>**/common/**</bypassPath>
+                            <bypassPath>**/loginProcessAction.do</bypassPath>
+                            <bypassPath>**/logout.do</bypassPath>
+                        </bypassPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>pfb_3</id>
+        <remoteUrlBase>http://10.1.1.174/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestpfb_3.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="insert_form" value="true"/>
+                            <param key="username_field_name" value="j_username"/>
+                            <param key="password_field_name" value="j_password"/>
+                            <param key="other_param_name" value="j_level" attribute="3"/>
+                            <param key="form_name" value="LoginForm"/>
+                            <param key="login_target" value="PFB"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/Login.jsp</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.ContentRewriter</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="http://10.1.1.174/" value="http://iaptestpfb_3.afa.gov.tw/"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/*</mappingPath>
+                        </mappingPaths>
+                        <bypassPaths>
+                            <bypassPath>**/images/**</bypassPath>
+                            <bypassPath>**/common/**</bypassPath>
+                            <bypassPath>**/loginProcessAction.do</bypassPath>
+                            <bypassPath>**/logout.do</bypassPath>
+                        </bypassPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>psc</id>
+        <remoteUrlBase>https://scm.afa.gov.tw/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestpsc.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="username_field_name" value="in_account"/>
+                            <param key="password_field_name" value="in_password"/>
+                            <param key="form_name" value="form1"/>
+                            <param key="other_param_id" value="__EVENTTARGET" attribute="ImageButton1"/>
+                            <param key="login_target" value="PSC"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/AppLoginPage.aspx</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>cfp-1_1</id>
+        <remoteUrlBase>http://fruitep.afa.gov.tw/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestcfp_apply_a.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="username_field_name" value="loginId"/>
+                            <param key="password_field_name" value="password"/>
+                            <param key="form_name" value="form1"/>
+                            <param key="other_param_name" value="ddlUse" attribute="a"/>
+                            <param key="other_param_id" value="__EVENTTARGET" attribute="m_btnLogin"/>
+                            <param key="login_target" value="CFP_Apply_a"/>
+                            <param key="login_failed_msg" value="請洽中興大學"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/LoginAll.aspx</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.ContentRewriter</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="http://code.jquery.com" value="https://code.jquery.com"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/LoginAll.aspx</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>cfp-1_2</id>
+        <remoteUrlBase>http://fruitep.afa.gov.tw/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestcfp_apply_o.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="insert_form" value="true"/>
+                            <param key="username_field_name" value="loginId"/>
+                            <param key="password_field_name" value="password"/>
+                            <param key="form_name" value="form1"/>
+                            <param key="other_param_name" value="ddlUse" attribute="o"/>
+                            <param key="other_param_id" value="__EVENTTARGET" attribute="m_btnLogin"/>
+                            <param key="login_target" value="CFP_Apply_o"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/LoginAll.aspx</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>cfp-2</id>
+        <remoteUrlBase>http://fruitep.afa.gov.tw/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestcfp.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="insert_form" value="true"/>
+                            <param key="username_field_name" value="m_txtID"/>
+                            <param key="password_field_name" value="m_txtPWD"/>
+                            <param key="form_name" value="form1"/>
+                            <param key="other_param_id" value="__EVENTTARGET" attribute="m_btnLogin"/>
+                            <param key="login_target" value="CFP_Approve"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/Login.aspx</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>pmg</id>
+        <remoteUrlBase>http://60.251.44.31:8088/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestpmg.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.esigate.afa.extension.AfaFormFiller</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="username_field_name" value="id"/>
+                            <param key="password_field_name" value="password"/>
+                            <param key="form_name" value="frmLogin"/>
+                            <param key="login_target" value="PMG"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/login.jsp</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+    <policy>
+        <id>sam</id>
+        <remoteUrlBase>http://sam.linkchain.tw/</remoteUrlBase>
+        <urlPatterns>
+            <urlPattern>iaptestsam.afa.gov.tw</urlPattern>
+        </urlPatterns>
+        <extensions>
+            <extension>
+                <uri>com.cht.iac.sso.sp.extension.HeaderInjector</uri>
+                <rules>
+                    <rule>
+                        <id>1</id>
+                        <params>
+                            <param key="sso_userid"/>
+                            <param key="sso_ticketid"/>
+                            <param key="sso_clientip"/>
+                            <param key="sso_auth_code"/>
+                        </params>
+                        <mappingPaths>
+                            <mappingPath>**/SSOLogin</mappingPath>
+                        </mappingPaths>
+                    </rule>
+                </rules>
+            </extension>
+        </extensions>
+    </policy>
+</policyConfig>

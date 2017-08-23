@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policyConfig>
+    <version>20160907141718</version>
+    <reloadService>true</reloadService>
+    <ignoreSSLVerify>true</ignoreSSLVerify>
+    <socketTimeout>10000</socketTimeout>
+    <connectTimeout>1000</connectTimeout>
+    <legalDomains>
+        <domain>172.17.0.10</domain>
+        <domain>172.17.42.1</domain>
+        <domain>10.82.110.21</domain>
+        <domain>iaptest.afa.gov.tw</domain>
+        <domain>rinostest.afa.gov.tw</domain>
+        <domain>vostest.afa.gov.tw</domain>
+        <domain>iaptestpqr.afa.gov.tw</domain>
+        <domain>iaptestcfp.afa.gov.tw</domain>
+        <domain>iaptestcfp_apply_a.afa.gov.tw</domain>
+        <domain>iaptestcfp_apply_o.afa.gov.tw</domain>
+        <domain>iaptestpsc.afa.gov.tw</domain>
+        <domain>iaptestpmg.afa.gov.tw</domain>
+        <domain>iaptestpfb.afa.gov.tw</domain>
+        <domain>iaptestsam.afa.gov.tw</domain>
+        <domain>healthtest.afa.gov.tw</domain>
+        <domain>210.71.217.251</domain>
+        <domain>210.71.217.252</domain>
+        <domain>210.71.217.243</domain>
+        <domain>111.70.133.250</domain>
+    </legalDomains>
+    <environment>測試環境</environment>
+</policyConfig>

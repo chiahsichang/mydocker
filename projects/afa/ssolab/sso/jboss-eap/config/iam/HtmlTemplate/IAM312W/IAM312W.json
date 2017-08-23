@@ -1,0 +1,163 @@
+[ {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "typeId",
+	"title" : "系統代碼：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "resourceTypeName",
+	"title" : "系統名稱：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "description",
+	"title" : "系統描述：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_adminId",
+	"title" : "系統負責人帳號：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_onlineTime",
+	"title" : "上線日期：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_northAdmin",
+	"title" : "北區窗口：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_centerAdmin",
+	"title" : "中區窗口：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_southAdmin",
+	"title" : "南區窗口：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+}, {
+	"detailBeans" : [ {
+		"lableDisplay" : "",
+		"inputClass" : "form-control",
+		"inputReadonly" : false,
+		"inputHidden" : false,
+		"inputType" : "text",
+		"inputMaxlength" : 0
+	} ],
+	"id" : "param_eastAdmin",
+	"title" : "東區窗口：",
+	"title_preStr" : "※",
+	"title_preStr_color" : "#FF0000",
+	"title_lastStr" : "",
+	"title_lastStr_color" : "#000000",
+	"inputValue" : "",
+	"hidden" : false,
+	"readonly" : false
+} ]
