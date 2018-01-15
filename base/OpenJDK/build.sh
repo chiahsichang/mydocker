@@ -1,0 +1,1 @@
+docker build --rm -t cht/zulu-openjdk-cek:8  .

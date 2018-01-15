@@ -1,0 +1,136 @@
+2016-11-24 14:34:33,761 INFO  [JavaFX Application Thread     ] [BaseConfigurationManager      ]  - Creating UI property file
+2016-11-24 14:34:34,330 ERROR [JavaFX Application Thread     ] [BaseConfigurationUtils        ]  - Invalid number format 
+2016-11-24 14:34:34,948 ERROR [JavaFX Application Thread     ] [MqttStatsFileIO               ]  - Cannot read the statistics file from C:\Users\Chris\mqtt-spy\mqtt-spy-stats.xml
+java.io.FileNotFoundException: Cannot load the file from C:\Users\Chris\mqtt-spy\mqtt-spy-stats.xml
+	at pl.baczkowicz.spy.xml.XMLParser.loadFromFile(XMLParser.java:359)
+	at pl.baczkowicz.mqttspy.ui.stats.MqttStatsFileIO.loadStats(MqttStatsFileIO.java:57)
+	at pl.baczkowicz.spy.ui.stats.StatisticsManager.loadStats(StatisticsManager.java:298)
+	at pl.baczkowicz.mqttspy.ui.controllers.MqttSpyMainController.init(MqttSpyMainController.java:154)
+	at pl.baczkowicz.mqttspy.ui.MqttViewManager.createMainWindow(MqttViewManager.java:151)
+	at pl.baczkowicz.mqttspy.Main.start(Main.java:90)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191)
+	at java.lang.Thread.run(Unknown Source)
+2016-11-24 14:34:35,913 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (C:\Users\Chris\mqtt-spy\mqtt-spy-configuration.xml) = false
+2016-11-24 14:34:50,339 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from C:\Users\Chris\mqtt-spy\mqtt-spy-configuration.xml
+2016-11-24 14:34:56,251 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2016-11-24 14:34:56,252 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2016-11-24 14:34:56,259 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2016-11-24 14:35:01,075 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=0.5.4-52
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.URL.openStream(Unknown Source)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2016-11-24 14:35:23,784 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection Chris_143456255@192.168.30.87
+2016-11-24 14:35:23,799 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (192.168.30.87 -> tcp://192.168.30.87)
+2016-11-24 14:35:23,811 ERROR [Thread-12                     ] [BaseConfigurationUtils        ]  - Invalid number format 
+2016-11-24 14:35:24,149 ERROR [JavaFX Application Thread     ] [FileUtils                     ]  - No files in C:\Users\Chris\mqtt-spy\
+2016-11-24 14:35:24,817 INFO  [mqtt-spy [ConnectionRunnable for Chris_143456255@192.168.30.87]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [Chris_143456255] to server [[tcp://192.168.30.87]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2016-11-24 14:35:24,958 INFO  [MQTT Call: Chris_143456255    ] [MqttConnectionResultHandler   ]  - Chris_143456255@192.168.30.87 connected
+2016-11-24 14:35:24,961 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2016-11-24 14:35:47,504 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:35:49,415 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:35:50,071 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:35:50,271 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:35:50,447 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:35:50,639 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:35:50,815 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:36:23,791 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "test". Payload size = "5"
+2016-11-24 14:39:07,872 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting Chris_143456255 from [tcp://192.168.30.87]
+2016-11-24 14:39:07,876 INFO  [MQTT Disc: Chris_143456255    ] [MqttDisconnectionResultHandler]  - Chris_143456255@192.168.30.87 disconnected
+2016-11-24 15:04:15,615 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (C:\Users\Chris\mqtt-spy\mqtt-spy-configuration.xml) = true
+2016-11-24 15:04:15,709 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from C:\Users\Chris\mqtt-spy\mqtt-spy-configuration.xml
+2016-11-24 15:04:20,368 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (192.168.30.87 -> tcp://192.168.30.87)
+2016-11-24 15:04:20,993 ERROR [JavaFX Application Thread     ] [FileUtils                     ]  - No files in C:\Users\Chris\mqtt-spy\
+2016-11-24 15:04:21,592 INFO  [mqtt-spy [ConnectionRunnable for Chris_143456255@192.168.30.87]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [Chris_143456255] to server [[tcp://192.168.30.87]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2016-11-24 15:04:21,715 INFO  [MQTT Call: Chris_143456255    ] [MqttConnectionResultHandler   ]  - Chris_143456255@192.168.30.87 connected
+2016-11-24 15:04:21,941 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2016-11-24 15:04:23,139 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting Chris_143456255 from [tcp://192.168.30.87]
+2016-11-24 15:04:23,145 INFO  [MQTT Disc: Chris_143456255    ] [MqttDisconnectionResultHandler]  - Chris_143456255@192.168.30.87 disconnected
+2016-11-24 15:04:24,450 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting Chris_143456255 from [tcp://192.168.30.87]
+2016-11-24 15:39:08,484 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (C:\Users\Chris\mqtt-spy\mqtt-spy-configuration.xml) = true
+2016-11-24 15:39:08,592 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from C:\Users\Chris\mqtt-spy\mqtt-spy-configuration.xml
+2016-11-24 15:39:34,590 ERROR [JavaFX Application Thread     ] [ControlPanelController        ]  - Cannot retrieve version info
+pl.baczkowicz.spy.exceptions.XMLException: Cannot read version info from http://baczkowicz.pl/mqtt-spy/version_0_6_0.xml?current=0.5.4-52
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:102)
+	at pl.baczkowicz.spy.ui.controllers.ControlPanelController$2.run(ControlPanelController.java:203)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.URL.openStream(Unknown Source)
+	at pl.baczkowicz.spy.ui.versions.VersionManager.loadVersions(VersionManager.java:94)
+	... 2 more
+2016-11-24 15:39:57,790 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...

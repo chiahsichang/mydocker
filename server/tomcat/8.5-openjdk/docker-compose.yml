@@ -1,0 +1,5 @@
+tomcat:
+    image: tomcat:8.5
+    #restart: always
+    ports:
+        - 18080:8080
